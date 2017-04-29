@@ -38,7 +38,6 @@ fi
 
 git -C $GCS_REPO pull
 gpg --armor --homedir $GCS_GNUPGHOME --export lizard.era@gmail.com > $GCS_REPO/keyring/$GCS_HOST_ID.gpg
-git -C $GCS_REPO pull
 git -C $GCS_REPO add $GCS_REPO/keyring/$GCS_HOST_ID.gpg
 git -C $GCS_REPO commit -m "Add $GCS_HOST_ID public key"
 git -C $GCS_REPO push

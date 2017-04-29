@@ -24,7 +24,7 @@ Store and sync system configuration with git
 5. Codificar datos (encode)
 
 	a) Empaquetar
-	b) Actualizar anillo de claves
+	b) Actualizar el anillo de claves local con las claves del repo
 	c) Cifrar
 
 6. Decodificar datos (decode)
