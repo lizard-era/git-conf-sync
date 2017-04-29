@@ -7,7 +7,7 @@ then
 fi
 
 git -C $GCS_REPO pull
-cp $GCS_WORK/couriass.gpg $GCS_REPO/couriass.gpg
-git -C $GCS_REPO add $GCS_REPO/couriass.gpg
-git -C $GCS_REPO commit -m "Upload couriass"
+cp $GCS_WORK/curiass.gpg $GCS_REPO/curiass.gpg
+git -C $GCS_REPO add $GCS_REPO/curiass.gpg
+git -C $GCS_REPO commit -m "Upload curiass"
 git -C $GCS_REPO push

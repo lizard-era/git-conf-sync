@@ -1,6 +1,10 @@
 # git-conf-sync
 Store and sync system configuration with git
 
+# Curiass
+
+Sistema de distribución de claves de usuario. 
+
 # Primitivas:
 
 1. Inicializar anillo (setup)
@@ -66,15 +70,15 @@ https://github.com/lizard-era/git-conf-store, puede ser en github o en
 cualquier otro servidor git. Puedes utilizar un repositorio público o
 privado, el fichero que almacena las claves se cifra antes de subir.
 
-3. Descarga el proyecto couriass, el lugar por defecto para el proyecto
-es /opt/couriass.
+3. Descarga el proyecto curiass, el lugar por defecto para el proyecto
+es /opt/curiass.
 
   # cd /opt
-  # git clone https://github.com/lizard-era/git-conf-sync.git couriass
+  # git clone https://github.com/lizard-era/git-conf-sync.git curiass
 
 3. Establece tus parámetros de configuración, edita el siguiente fichero:
 
-  /opt/couriass/etc/git-conf-sync.cfg
+  /opt/curiass/etc/git-conf-sync.cfg
 
 E indica los siguientes datos
 

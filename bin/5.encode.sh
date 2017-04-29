@@ -1,7 +1,7 @@
 CONF_FILE=./etc/git-conf-sync.cfg
 . $CONF_FILE
 
-(cd $GCS_WORK;tar cvzf $GCS_WORK/couriass.tar.gz *.txt) 
+(cd $GCS_WORK;tar cvzf $GCS_WORK/curiass.tar.gz *.txt) 
 git -C $GCS_REPO pull
 
 for key in $GCS_REPO/keyring/*.gpg
@@ -18,4 +18,4 @@ do
 	recipients="$recipients -R $key"
 done
 
-gpg --homedir $GCS_GNUPGHOME $recipients --trust-model always --output $GCS_WORK/couriass.gpg --encrypt $GCS_WORK/couriass.tar.gz 
+gpg --homedir $GCS_GNUPGHOME $recipients --trust-model always --output $GCS_WORK/curiass.gpg --encrypt $GCS_WORK/curiass.tar.gz 
