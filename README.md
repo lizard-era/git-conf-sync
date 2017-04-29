@@ -72,9 +72,10 @@ privado, el fichero que almacena las claves se cifra antes de subir.
 
 3. Descarga el proyecto curiass, el lugar por defecto para el proyecto
 es /opt/curiass.
-
->  # cd /opt
->  # git clone https://github.com/lizard-era/git-conf-sync.git curiass
+```
+ # cd /opt
+ # git clone https://github.com/lizard-era/git-conf-sync.git curiass
+```
 
 3. Establece tus parámetros de configuración, edita el siguiente fichero:
 
@@ -91,16 +92,27 @@ El fichero de configuración no se transmite al repositorio
 4. Generar anillo
 
 Ejecutar el proceso de configuración para generar el anillo de claves
-
-> # ./bin/2.init.sh
+'''
+ # ./bin/2.init.sh
+'''
 
 Si durante la generación de clave se queda sin bits de entropía, pruebe
 a utilzar la siguiente utilidad:
 
-> # rngd -f -r /dev/urandom
+'''
+ # rngd -f -r /dev/urandom
+'''
 
+5. Exportar las claves al anillo
 
-5. Configurar cron
+Después exportar las claves al anillo mediante las siguientes operaciones:
+'''
+ # ./bin/4.export.sh
+ # ./bin/5.encode.sh
+ # ./bin/8.commit.sh
+'''
+
+7. Configurar cron
 
 (por hacer)
 
