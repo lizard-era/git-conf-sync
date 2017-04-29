@@ -1,3 +1,4 @@
+etc/curiass.cfg
 repo/store/*
 vault/gnupg/*
 customs

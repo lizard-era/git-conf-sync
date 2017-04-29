@@ -5,45 +5,45 @@ Store and sync system configuration with git
 
 Sistema de distribución de claves de usuario. 
 
-# Primitivas:
+## Primitivas:
 
 1. Inicializar anillo (setup)
 
-	a) Crear un repositorio git
+	* a) Crear un repositorio git
 
 2. Inicializar host (init)
 
-	a) Crear configuración y script de control
-	b) Crear claves del nodo
-	c) Añadir nodo al anillo
+	* a) Crear configuración y script de control
+	* b) Crear claves del nodo
+	* c) Añadir nodo al anillo
 
 3. Importar datos, del anillo al host (import)
 
-	a) Establecer la configuración del área de intercambio en la configuración del host
+	* a) Establecer la configuración del área de intercambio en la configuración del host
 
 4. Extraer datos, desde el host al anillo (export)
 
-	a) Extraer cuentas de usuaro y almacenar en área de intercambio
+	* a) Extraer cuentas de usuaro y almacenar en área de intercambio
 
 5. Codificar datos (encode)
 
-	a) Empaquetar
-	b) Actualizar el anillo de claves local con las claves del repo
-	c) Cifrar
+	* a) Empaquetar
+	* b) Actualizar el anillo de claves local con las claves del repo
+	* c) Cifrar
 
 6. Decodificar datos (decode)
 
-	a) Descifrar vault
-	b) Desempaquetar en área de intercambio
+	* a) Descifrar vault
+	* b) Desempaquetar en área de intercambio
 
 7. Sincronizar (checkout)
 
-	a) Actualizar repositorio 
+	* a) Actualizar repositorio 
 
 8. Difusión (commit)
 
-	a) Copiar vault al repo
-	b) Transmitir cambios al repositorio
+	* a) Copiar vault al repo
+	* b) Transmitir cambios al repositorio
 
 9. Neutralizar host (delete)
 
@@ -55,7 +55,7 @@ Sistema de distribución de claves de usuario.
 # Cómo funciona
 
 
-# Instalación
+## Instalación
 
 1. Requsitos
 
@@ -73,8 +73,8 @@ privado, el fichero que almacena las claves se cifra antes de subir.
 3. Descarga el proyecto curiass, el lugar por defecto para el proyecto
 es /opt/curiass.
 
-  # cd /opt
-  # git clone https://github.com/lizard-era/git-conf-sync.git curiass
+>  # cd /opt
+>  # git clone https://github.com/lizard-era/git-conf-sync.git curiass
 
 3. Establece tus parámetros de configuración, edita el siguiente fichero:
 
@@ -90,7 +90,15 @@ El fichero de configuración no se transmite al repositorio
 
 4. Generar anillo
 
-Ejecutar el proceso setup.sh para generar el anillo de claves
+Ejecutar el proceso de configuración para generar el anillo de claves
+
+> # ./bin/2.init.sh
+
+Si durante la generación de clave se queda sin bits de entropía, pruebe
+a utilzar la siguiente utilidad:
+
+> # rngd -f -r /dev/urandom
+
 
 5. Configurar cron
 
