@@ -1,4 +1,4 @@
-CONF_FILE=/opt/git-conf-sync/etc/git-conf-sync.cfg
+CONF_FILE=./etc/git-conf-sync.cfg
 . $CONF_FILE
 
 cp $GCS_SHADOW $GCS_WORK/passwords
